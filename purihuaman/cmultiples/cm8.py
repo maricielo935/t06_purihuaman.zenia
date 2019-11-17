@@ -1,34 +1,35 @@
 import os
-#PRESENTACION DE EJERCICIOS EN MATEMATICA BASICA
+#PREMIO POR COMPRAS EN PLAZA VEA
 #Declaracion de variables
-alumno,nro_de_ejercicios,puntos_por_ejercicio="",0,0
+cliente,producto,cantidad,precio_producto="","",0,0.0
 
 #INPUT
-alumno=os.sys.argv[1]
-nro_de_ejercicios=int(os.sys.argv[2])
-puntos_por_ejercicio=int(os.sys.argv[3])
+cliente=os.sys.argv[1]
+producto=os.sys.argv[2]
+cantidad=int(os.sys.argv[3])
+precio_producto=float(os.sys.argv[4])
 
 #PROCESSING
-nota=(nro_de_ejercicios*puntos_por_ejercicio)
+monto=(cantidad*precio_producto)
 
 #VERIFICADOR
-aprobar=(nota>=11)
+monto=(monto>50)
 
 #OUTPUT
-print("#################################################")
-print("#PRESENTACION DE EJERCICIOS EN MATEMATICA BASICA#")
-print("#################################################")
-print(" #  Alumno                    :", alumno)
-print(" #  N° de ejercicios resueltos:", nro_de_ejercicios)
-print(" #  Puntos por ejercicio      :", puntos_por_ejercicio, "puntos")
-print(" #  Nota                      :", nota)
-print("#################################################")
+print("###################################")
+print("# PREMIO POR COMPRAS EN PLAZA VEA #")
+print("###################################")
+print(" # Cliente          :", cliente)
+print(" # Producto         :", producto)
+print(" # Precio por unidad:", precio_producto,"soles")
+print(" # Cantidad         :", cantidad,"unidades")
+print("###################################")
 
 #Condicion multiple
-#SI la nota es igual o mayor a 11 , mostrarle Aprobo Matematica Basica
-if ( aprobar==True):
-    print("Aprobo Matematica Basica.")
+#SI el monto resulta mayor a 5o soles , mostrarle Gano un descuento del 50% en Hamburgesas BEMBOS
+if ( monto==True):
+    print("Gano un descuento del 50% en Hamburgesas BEMBOS.")
 #fin_if
-if ( aprobar<11):
-    print("Desaprobo Matematica Basica.")
+if ( monto<50):
+    prin("Gano 5 puntos bonus.")
 #fin_if
